@@ -5,9 +5,10 @@ import { Container, Name, Username, Description } from "./styles";
 function UserDetails(props) {
     return (
         <Container>
-            <Name></Name>
-            <Username> </Username>
-            <Description></Description>
+            <Name>{props.name}</Name>
+            <Username>{props.login}</Username>
+            {/* props?.bio virá APENAS se o usuário tiver uma bio! Assim, não quebrará a aplicação */}
+            <Description>{props?.bio}</Description>
         </Container>
     );
 }
